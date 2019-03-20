@@ -1,7 +1,7 @@
 <template>
   <div class="resource-list-wrapper">
     <div class="top-panel">
-      <el-select v-model="resourceType" slot="prepend" placeholder="请选择" title="资源库类型">
+      <el-select v-model="resourceType" slot="prepend" placeholder="请选择" title="资源库类型"  @change="doReFetchCorpusResourceList">
         <el-option
           v-for="item in resourceTypeList"
           :key="item.value"
